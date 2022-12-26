@@ -4,23 +4,24 @@ using namespace std;
 
 int main() {
     int n_turns = 0;
-    int n_ships_left = 14;
-    bool board[6][6] = {
-        {1, 0, 0, 1, 0, 0},
-        {1, 0, 0, 1, 0, 1},
-        {1, 0, 0, 1, 0, 1},
-        {1, 0, 0, 0, 0, 1},
-        {0, 0, 0, 0, 0, 1},
-        {0, 1, 1, 1, 0, 0},
+    int n_ships_left = 20;
+    bool board[7][7] = { //I'm pretty sure 7 x 7 board is the standard size
+        {0, 0, 1, 0, 1, 1, 1},
+        {0, 0, 1, 0, 0, 1, 0},
+        {1, 0, 1, 0, 0, 1, 0},
+        {1, 0, 1, 0, 0, 1, 0},
+        {0, 0, 1, 0, 0, 1, 0},
+        {0, 0, 0, 0, 0, 0, 0},
+        {0, 1, 1, 1, 0, 0, 0},
     };
-    cout << "This is a 6 x 6 game of Battleship! There are 4 ships to hit." << endl;
-    int row, column;
+    cout << "This is a 7 x 7 game of Battleship! There are 5 ships to hit. (lengths 5, 4, 3, 3, and 2)" << endl; //I'm pretty sure those are the original ship lengths too
+    int row, column; //initializing variables
     while (n_ships_left > 0) {
-        cout << "Select which row (1 - 6): ";
-        cin >> row;
-        cout << "Select which column (1 - 6): ";
+        cout << "Select which row (1 - 7): ";
+        cin >> row; 
+        cout << "Select which column (1 - 7): ";
         cin >> column;
-        if (board[row-1][column-1]) { 
+        if (board[row-1][column-1]) { //checking if the element in the list at that position is true or not, if it's true then it executes the below lines
             board[row-1][column-1] = 0;
             n_turns += 1;
             n_ships_left -= 1;
@@ -44,3 +45,4 @@ int main() {
         cout << "You beat the game with a rating 0/3! Better luck next time!" << endl;
     }
 }
+
