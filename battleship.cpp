@@ -14,37 +14,45 @@ int main() {
   int computer_ships_left = 20;
   bool board[7][7] = {
       // This is placement of computer's board.
-      {0, 0, 1, 0, 1, 1, 1}, {0, 0, 1, 0, 0, 1, 0}, {1, 0, 1, 0, 0, 1, 0},
-      {1, 0, 1, 0, 0, 1, 0}, {0, 0, 1, 0, 0, 1, 0}, {0, 0, 0, 0, 0, 0, 0},
+      {0, 0, 1, 0, 1, 1, 1}, 
+      {0, 0, 1, 0, 0, 1, 0}, 
+      {1, 0, 1, 0, 0, 1, 0},
+      {1, 0, 1, 0, 0, 1, 0}, 
+      {0, 0, 1, 0, 0, 1, 0}, 
+      {0, 0, 0, 0, 0, 0, 0},
       {0, 1, 1, 1, 0, 0, 0},
   };
   bool usr_board[7][7] = {
-      {0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0},
-      {0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0},
+      {0, 0, 0, 0, 0, 0, 0}, 
+      {0, 0, 0, 0, 0, 0, 0}, 
+      {0, 0, 0, 0, 0, 0, 0},
+      {0, 0, 0, 0, 0, 0, 0}, 
+      {0, 0, 0, 0, 0, 0, 0}, 
+      {0, 0, 0, 0, 0, 0, 0},
       {0, 0, 0, 0, 0, 0, 0},
   };
   char usr_guess[7][7] = {
       // This shows what you've guessed.
-      {'O', 'O', 'O', 'O', 'O', 'O', 'O'}, {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-      {'O', 'O', 'O', 'O', 'O', 'O', 'O'}, {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-      {'O', 'O', 'O', 'O', 'O', 'O', 'O'}, {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
+      {'O', 'O', 'O', 'O', 'O', 'O', 'O'}, 
+      {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
+      {'O', 'O', 'O', 'O', 'O', 'O', 'O'}, 
+      {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
+      {'O', 'O', 'O', 'O', 'O', 'O', 'O'}, 
+      {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
       {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
   };
   char computer_guess[7][7] = {
-      {'O', 'O', 'O', 'O', 'O', 'O', 'O'}, {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-      {'O', 'O', 'O', 'O', 'O', 'O', 'O'}, {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-      {'O', 'O', 'O', 'O', 'O', 'O', 'O'}, {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
+      {'O', 'O', 'O', 'O', 'O', 'O', 'O'}, 
+      {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
+      {'O', 'O', 'O', 'O', 'O', 'O', 'O'}, 
+      {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
+      {'O', 'O', 'O', 'O', 'O', 'O', 'O'}, 
+      {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
       {'O', 'O', 'O', 'O', 'O', 'O', 'O'},
   };
   int row, column, row1, column1;
-  cout << "This is a 7 x 7 game of Battleship! There are 5 ships to hit. "
-          "(lengths 5, 4, 3, 3, and 2)\n"
-       << "0 means it has not been explored yet, M means miss, and X means "
-          "hit!. Have fun!"
-       << endl; // I'm pretty sure those are the original ship lengths too
-  cout << "Choose the placement of your ships."
-       << "\n"
-       << endl;
+  cout << "This is a 7 x 7 game of Battleship! There are 5 ships to hit. (lengths 5, 4, 3, 3, and 2).\n"  << "0 means it has not been explored yet, M means miss, and X means hit!. Have fun!" << endl; // I'm pretty sure those are the original ship lengths too
+  cout << "Choose the placement of your ships." << "\n" << endl;
   cout << "  1 2 3 4 5 6 7 " << endl;
   for (int i = 0; i < 7; i++) {
     cout << i + 1 << " ";
