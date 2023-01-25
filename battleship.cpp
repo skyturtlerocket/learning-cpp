@@ -236,7 +236,7 @@ int main() {
   }
 
   while (n_ships_left_usr > 0 || computer_ships_left > 0) {
-    cout << "\n" << "These are your guesses:" << "\n << endl;
+    cout << "\n" << "These are your guesses:" << "\n" << endl;
     cout << "  1 2 3 4 5 6 7 " << endl;
     for (int i = 0; i < 7; i++) {
       cout << i + 1 << " ";
