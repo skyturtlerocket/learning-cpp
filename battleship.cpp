@@ -61,8 +61,7 @@ int main() {
     }
     cout << "\n";
   }
-  cout << "\n"
-       << "Choose which row to place endpoint 1 of battleship (length 4): ";
+  cout << "\n" << "Choose which row to place endpoint 1 of battleship (length 4): ";
   cin >> row;
   cout << "Choose which column to place endpoint 1 of battleship (length 4): ";
   cin >> column;
@@ -96,8 +95,7 @@ int main() {
     }
     cout << "\n";
   }
-  cout << "\n"
-       << "Choose which row to place endpoint 1 of carrier (length 5): ";
+  cout << "\n" << "Choose which row to place endpoint 1 of carrier (length 5): ";
   cin >> row;
   cout << "Choose which column to place endpoint 1 of carrier (length 5): ";
   cin >> column;
@@ -132,8 +130,7 @@ int main() {
     cout << "\n";
   }
 
-  cout << "\n"
-       << "Choose which row to place endpoint 1 of cruiser (length 3): ";
+  cout << "\n" << "Choose which row to place endpoint 1 of cruiser (length 3): ";
   cin >> row;
   cout << "Choose which column to place endpoint 1 of cruiser (length 3): ";
   cin >> column;
@@ -168,8 +165,7 @@ int main() {
     cout << "\n";
   }
 
-  cout << "\n"
-       << "Choose which row to place endpoint 1 of submarine (length 3): ";
+  cout << "\n" << "Choose which row to place endpoint 1 of submarine (length 3): ";
   cin >> row;
   cout << "Choose which column to place endpoint 1 of submarine (length 3): ";
   cin >> column;
@@ -204,8 +200,7 @@ int main() {
     cout << "\n";
   }
 
-  cout << "\n"
-       << "Choose which row to place endpoint 1 of destroyer (length 2): ";
+  cout << "\n" << "Choose which row to place endpoint 1 of destroyer (length 2): ";
   cin >> row;
   cout << "Choose which column to place endpoint 1 of destroyer (length 2): ";
   cin >> column;
@@ -241,10 +236,7 @@ int main() {
   }
 
   while (n_ships_left_usr > 0 || computer_ships_left > 0) {
-    cout << "\n"
-         << "These are your guesses:"
-         << "\n"
-         << endl;
+    cout << "\n" << "These are your guesses:" << "\n << endl;
     cout << "  1 2 3 4 5 6 7 " << endl;
     for (int i = 0; i < 7; i++) {
       cout << i + 1 << " ";
@@ -253,10 +245,7 @@ int main() {
       }
       cout << "\n";
     }
-    cout << "\n"
-         << "These are the computer guesses:"
-         << "\n"
-         << endl;
+    cout << "\n" << "These are the computer guesses:" << "\n" << endl;
     cout << "  1 2 3 4 5 6 7 " << endl;
     for (int i = 0; i < 7; i++) {
       cout << i + 1 << " ";
@@ -290,9 +279,7 @@ int main() {
       usr_guess[row - 1][column - 1] = 'X';
       n_turns += 1;
       n_ships_left_usr -= 1;
-      cout << "Hit! Turn number " << n_turns << " complete."
-           << " There are " << n_ships_left_usr << " places to hit left."
-           << endl;
+      cout << "Hit! Turn number " << n_turns << " complete." << " There are " << n_ships_left_usr << " places to hit left." << endl;
       cout << "\n" << endl;
 
     } else {
